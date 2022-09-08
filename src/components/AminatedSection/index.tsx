@@ -28,7 +28,7 @@ AnimatedSections.Section = ({ children, ...rest }) => {
         w="100%"
         h="100%"
         opacity={isInView ? 1 : 0}
-        transition="all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+        transition="all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.8s"
       >
         {children}
       </Box>

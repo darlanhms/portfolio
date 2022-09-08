@@ -25,8 +25,13 @@ const SocialBadge: React.FC<SocialBadgeProps> = ({ Icon, url, label }) => {
         borderColor="white"
         borderWidth={1}
         color="white"
+        _hover={{
+          color: 'gray.300',
+          transition: '0.2s',
+          borderColor: 'gray.300',
+        }}
       >
-        <Icon color="white" size={22} />
+        <Icon size={22} />
         <Text>{label}</Text>
       </Center>
     </Link>
