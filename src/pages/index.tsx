@@ -1,73 +1,60 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from 'next';
-
-import styles from '@/styles/pages/Home.module.scss';
-import profileImg from '@/assets/images/profile.jpg';
 import Head from 'next/head';
-import { FaGithub, FaLinkedin, FaDocker, FaNodeJs, FaReact, FaAws } from 'react-icons/fa';
-import { SiJavascript, SiTypescript } from 'react-icons/si';
-import SocialBox from '@/components/SocialBox';
-import Divisor from '@/components/Divisor';
-import ProjectBox from '@/components/pages/home/ProjectBox';
+import AnimatedSections from '@/components/AminatedSection';
+import { Center, Flex, Grid, GridItem, HStack, Text, VStack } from '@chakra-ui/react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import profilePic from '@/assets/images/profile.jpg';
+import SocialBadge from '@/components/SocialBadge';
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.infosContainer}>
+    <>
       <Head>
         <title>Darlan Hermes</title>
       </Head>
-
-      <img className={styles.imageContainer} src={profileImg.src} width={200} height={200} />
-
-      <Divisor size={40} />
-
-      <h3 className={styles.name}>Darlan Hermes</h3>
-
-      <Divisor size={15} />
-
-      <div className={styles.socials}>
-        <SocialBox href="https://github.com/darlanhms">
-          <FaGithub />
-          GitHub
-        </SocialBox>
-        <SocialBox href="https://www.linkedin.com/in/darlanhms">
-          <FaLinkedin />
-          Linkedin
-        </SocialBox>
-      </div>
-
-      <Divisor size={30} />
-
-      <div className={styles.techStacksContainer}>
-        <h4>Tech Stack</h4>
-
-        <Divisor size={13} />
-
-        <div className={styles.techStacks}>
-          <SiTypescript size={25} />
-          <SiJavascript size={25} />
-          <FaNodeJs size={25} />
-          <FaReact size={25} />
-          <FaDocker size={25} />
-          <FaAws size={25} />
-        </div>
-      </div>
-
-      <Divisor size={30} />
-
-      <div className={styles.projectsContainer}>
-        <h4>Projetos Principais</h4>
-
-        <Divisor size={20} />
-
-        <div>
-          <ProjectBox
-            name="Lofhen Beer"
-            description="Sistema gerencial de choperias, um ERP básico com regras adicionais específicas para a área"
-            link="https://github.com/darlanhms/lofhen-beer"
-          />
-        </div>
-      </div>
-    </div>
+      <AnimatedSections.Container bgColor="blackAlpha.800">
+        <AnimatedSections.Section>
+          <Center h="100%" w="100%">
+            <VStack spacing="100px">
+              <Grid templateColumns="400px 300px" gap="50px">
+                <GridItem>
+                  <Flex alignItems="center" h="100%" color="white" textAlign="start">
+                    <VStack align="flex-start">
+                      <Text fontSize="2xl" fontWeight="bold">
+                        Hi, I'm Darlan Hermes 👋
+                      </Text>
+                      <Text>
+                        A self-taught full stack software developer who focus on web-related technologies like
+                        Typescript, Javascript, Node and React
+                      </Text>
+                    </VStack>
+                  </Flex>
+                </GridItem>
+                <GridItem>
+                  <Center>
+                    <img
+                      style={{
+                        borderRadius: '50%',
+                        boxShadow:
+                          '0 0 1px 1px rgb(0 0 0 / 13%), 0 0 2px 2px rgb(0 0 0 / 13%), 0 0 7px -4px rgb(0 0 0 / 13%), 0 0 18px 7px rgb(0 0 0 / 13%), 0 0 16px 2px rgb(0 0 0 / 13%)',
+                      }}
+                      src={profilePic.src}
+                      width="200px"
+                      height="200px"
+                    />
+                  </Center>
+                </GridItem>
+              </Grid>
+              <HStack spacing={5}>
+                <SocialBadge Icon={FaLinkedin} url="https://www.linkedin.com/in/darlanhms/" label="LinkedIn" />
+                <SocialBadge Icon={FaGithub} url="https://github.com/darlanhms" label="GitHub" />
+              </HStack>
+            </VStack>
+          </Center>
+        </AnimatedSections.Section>
+      </AnimatedSections.Container>
+    </>
   );
 };
 
