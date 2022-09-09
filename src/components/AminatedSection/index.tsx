@@ -27,7 +27,7 @@ AnimatedSections.Section = ({ children, ...rest }) => {
       justify="flex-start"
       padding={{ base: '50px 20px', md: '50px' }}
       w="100%"
-      mh="101vh"
+      height="101vh"
       {...rest}
     >
       <Box

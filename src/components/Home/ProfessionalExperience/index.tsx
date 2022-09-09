@@ -49,7 +49,7 @@ const IndividualExperience: React.FC<IndividualExperienceProps> = ({ name, descr
 
 const ProfessionalExperienceSection: React.FC = () => {
   return (
-    <AnimatedSections.Section bgColor="gray.700">
+    <AnimatedSections.Section bgColor="gray.700" minHeight="101vh" height={{ base: 'auto', md: '101vh' }}>
       <Container h="100%" maxW={{ base: 'container.xl', md: 'container.lg' }} color="white">
         <Center h="100%">
           <VStack spacing="50px">
