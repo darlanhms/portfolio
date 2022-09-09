@@ -66,23 +66,25 @@ const ProfessionalExperienceSection: React.FC = () => {
                     <Text fontSize="sm">
                       Pedidos10 is a technology company that focuses on deliveries of all kinds. It stands out
                       in the market since it offers top-notch solutions for any need that a restaurant, bar,
-                      supermarket, or other type of delivery business has
+                      supermarket, or other type of delivery business has.
                     </Text>
                     <Text>Main assignments:</Text>
                     <UnorderedList fontSize="sm">
                       <ListItem>
                         Made architectural and structural decisions to develop a product from scratch (Point of
-                        Sale - POS)
+                        Sale - POS).
                       </ListItem>
                       <ListItem>
                         Developed a RESTful API using Typescript, Node.js (Express), DDD, with a substantial
-                        test coverage, including unit tests and E2E
+                        test coverage, including unit tests and E2E.
                       </ListItem>
                       <ListItem>
                         Developed a control panel using React, Typescript and GraphQL to manage POS key
-                        information
+                        information.
                       </ListItem>
-                      <ListItem>Developed the POS platform using Electron, React, Typescript, GraphQL</ListItem>
+                      <ListItem>
+                        Developed the POS platform using Electron, React, Typescript, GraphQL.
+                      </ListItem>
                     </UnorderedList>
                   </>
                 }
@@ -96,20 +98,20 @@ const ProfessionalExperienceSection: React.FC = () => {
                     <Text fontSize="sm">
                       SCL is a technology company that focuses on local shoe companies providing tools for their
                       operational needs. My experience mostly involved agents tools, including those that helped
-                      them to increase sales and organize their customers and overall operation
+                      them to increase sales and organize their customers and overall operation.
                     </Text>
                     <Text>Main assignments:</Text>
                     <UnorderedList fontSize="sm">
-                      <ListItem>Maintained a legacy vanilla JS mobile app</ListItem>
-                      <ListItem>Developed a B2B platform with vanilla JS</ListItem>
-                      <ListItem>Developed RESTful API's using Node.js (Loopback 3) and RethinkDB</ListItem>
+                      <ListItem>Maintained a legacy vanilla JS mobile app.</ListItem>
+                      <ListItem>Developed a B2B platform with vanilla JS.</ListItem>
+                      <ListItem>Developed RESTful API's using Node.js (Loopback 3) and RethinkDB.</ListItem>
                       <ListItem>
                         Developed a shoe trade show platform using Typescript and React framework, including an
-                        integration with the B2B platform
+                        integration with the B2B platform.
                       </ListItem>
                       <ListItem>
                         Maintained a React Native app which is used by Maroma Sorvetes' agents to make sales to
-                        local stores
+                        local stores.
                       </ListItem>
                     </UnorderedList>
                   </>
