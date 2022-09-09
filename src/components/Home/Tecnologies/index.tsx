@@ -10,22 +10,24 @@ import {
 } from '@chakra-ui/react';
 import { FaReact, FaDocker, FaAws, FaNodeJs } from 'react-icons/fa';
 import { SiJavascript, SiTypescript, SiKubernetes, SiFlutter } from 'react-icons/si';
+import { IconType } from 'react-icons';
 
 interface IndividualTechnologyProps {
   name: string;
   progress: number;
+  Icon: IconType;
 }
 
 const IndividualTechnology: React.FC<React.PropsWithChildren<IndividualTechnologyProps>> = ({
-  children,
   name,
   progress,
+  Icon,
 }) => {
   return (
     <Center flexDirection="column" color="gray.700">
       <CircularProgress color="gray.700" value={progress} size="70px" thickness="6px">
         <CircularProgressLabel display="flex" justifyContent="center" alignItems="center">
-          {children}
+          <Icon size={30} />
         </CircularProgressLabel>
       </CircularProgress>
       <Text mt={2} fontWeight="500" textAlign="center">
@@ -45,33 +47,15 @@ const TechnologiesSection: React.FC = () => {
               Technologies
             </Text>
             <Grid w="100%" templateColumns="repeat(3, 1fr)" gap={{ base: '30px', md: '50px' }}>
-              <IndividualTechnology progress={100} name="Typescript">
-                <SiTypescript size={30} />
-              </IndividualTechnology>
-              <IndividualTechnology progress={100} name="Javascript">
-                <SiJavascript size={30} />
-              </IndividualTechnology>
-              <IndividualTechnology progress={100} name="Node">
-                <FaNodeJs size={30} />
-              </IndividualTechnology>
-              <IndividualTechnology progress={100} name="React">
-                <FaReact size={30} />
-              </IndividualTechnology>
-              <IndividualTechnology progress={85} name="React Native">
-                <FaReact size={30} />
-              </IndividualTechnology>
-              <IndividualTechnology progress={15} name="Flutter">
-                <SiFlutter size={30} />
-              </IndividualTechnology>
-              <IndividualTechnology progress={80} name="Docker">
-                <FaDocker size={30} />
-              </IndividualTechnology>
-              <IndividualTechnology progress={50} name="AWS">
-                <FaAws size={30} />
-              </IndividualTechnology>
-              <IndividualTechnology progress={15} name="Kubernetes">
-                <SiKubernetes size={30} />
-              </IndividualTechnology>
+              <IndividualTechnology progress={100} name="Typescript" Icon={SiTypescript} />
+              <IndividualTechnology progress={100} name="Javascript" Icon={SiJavascript} />
+              <IndividualTechnology progress={100} name="Node" Icon={FaNodeJs} />
+              <IndividualTechnology progress={100} name="React" Icon={FaReact} />
+              <IndividualTechnology progress={85} name="React Native" Icon={FaReact} />
+              <IndividualTechnology progress={15} name="Flutter" Icon={SiFlutter} />
+              <IndividualTechnology progress={80} name="Docker" Icon={FaDocker} />
+              <IndividualTechnology progress={50} name="AWS" Icon={FaAws} />
+              <IndividualTechnology progress={15} name="Kubernetes" Icon={SiKubernetes} />
             </Grid>
           </VStack>
         </Center>
