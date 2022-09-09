@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import AnimatedSections from '@/components/AminatedSection';
+import AnimatedSections from '@/components/AnimatedSection';
 import {
   Center,
   Container,
@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react';
 import pedidos10Logo from '@/assets/images/pedidos10.jpg';
 import sclLogo from '@/assets/images/scl.jpg';
+import { useTranslation } from 'next-i18next';
 
 interface IndividualExperienceProps {
   name: string;
@@ -48,71 +49,48 @@ const IndividualExperience: React.FC<IndividualExperienceProps> = ({ name, descr
 };
 
 const ProfessionalExperienceSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <AnimatedSections.Section bgColor="gray.700" height="auto">
       <Container h="100%" maxW={{ base: 'container.xl', md: 'container.lg' }} color="white">
         <Center h="100%">
           <VStack spacing="50px">
             <Text fontSize="2xl" fontWeight="bold">
-              Professional experience
+              {t('professionalExperience')}
             </Text>
             <VStack spacing={8}>
               <IndividualExperience
                 name="Pedidos10"
-                range="Jan 2021 - Present"
+                range={t('pedidos10Range')}
                 image={pedidos10Logo.src}
                 description={
                   <>
-                    <Text fontSize="sm">
-                      Pedidos10 is a technology company that focuses on deliveries of all kinds. It stands out
-                      in the market since it offers top-notch solutions for any need that a restaurant, bar,
-                      supermarket, or other type of delivery business has.
-                    </Text>
-                    <Text>Main assignments:</Text>
+                    <Text fontSize="sm">{t('pedidos10Desc')}</Text>
+                    <Text>{t('mainAssignments')}:</Text>
                     <UnorderedList spacing={1} fontSize="sm">
-                      <ListItem>
-                        Made architectural and structural decisions to develop a product from scratch (Point of
-                        Sale - POS).
-                      </ListItem>
-                      <ListItem>
-                        Developed a RESTful API using Typescript, Node.js (Express), DDD, with a substantial
-                        test coverage, including unit tests and E2E.
-                      </ListItem>
-                      <ListItem>
-                        Developed a control panel using React, Typescript and GraphQL to manage POS key
-                        information.
-                      </ListItem>
-                      <ListItem>
-                        Developed the POS platform using Electron, React, Typescript, GraphQL.
-                      </ListItem>
+                      <ListItem>{t('pedidos10Attr1')}</ListItem>
+                      <ListItem>{t('pedidos10Attr2')}</ListItem>
+                      <ListItem>{t('pedidos10Attr3')}</ListItem>
+                      <ListItem>{t('pedidos10Attr4')}</ListItem>
                     </UnorderedList>
                   </>
                 }
               />
               <IndividualExperience
                 name="SCL Engenharia de Software LTDA"
-                range="May 2019 - Jan 2021"
+                range={t('sclRange')}
                 image={sclLogo.src}
                 description={
                   <>
-                    <Text fontSize="sm">
-                      SCL is a technology company that focuses on local shoe companies providing tools for their
-                      operational needs. My experience mostly involved agents tools, including those that helped
-                      them to increase sales and organize their customers and overall operation.
-                    </Text>
-                    <Text>Main assignments:</Text>
+                    <Text fontSize="sm">{t('sclDesc')}</Text>
+                    <Text>{t('mainAssignments')}:</Text>
                     <UnorderedList spacing={1} fontSize="sm">
-                      <ListItem>Maintained a legacy vanilla JS mobile app.</ListItem>
-                      <ListItem>Developed a B2B platform with vanilla JS.</ListItem>
-                      <ListItem>Developed RESTful API's using Node.js (Loopback 3) and RethinkDB.</ListItem>
-                      <ListItem>
-                        Developed a shoe trade show platform using Typescript and React framework, including an
-                        integration with the B2B platform.
-                      </ListItem>
-                      <ListItem>
-                        Maintained a React Native app which is used by Maroma Sorvetes' agents to make sales to
-                        local stores.
-                      </ListItem>
+                      <ListItem>{t('sclAttr1')}</ListItem>
+                      <ListItem>{t('sclAttr2')}</ListItem>
+                      <ListItem>{t('sclAttr3')}</ListItem>
+                      <ListItem>{t('sclAttr4')}</ListItem>
+                      <ListItem>{t('sclAttr5')}</ListItem>
                     </UnorderedList>
                   </>
                 }

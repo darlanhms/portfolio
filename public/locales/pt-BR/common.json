@@ -1,0 +1,25 @@
+{
+  "greetingsName": "Olá, me chamo Darlan Hermes",
+  "greetingsDesc": "Um desenvolvedor full stack auto-didata focado em tecnologias web, como Typescript, Javascript, Node e React",
+  "professionalExperience": "Experiência profissional",
+  "technologies": "Tecnologias",
+  "contact": "Contato",
+  "mainAssignments": "Principais atribuições",
+
+  "pedidos10Desc": "Pedidos10 é uma empresa de tecnologia com foco no delivery. Se destaca no mercado por conta de suas soluções muito bem desenvolvidas e que usam tecnologia de ponta para solucionar os problemas de restaurantes, bares, supermercados ou qualquer outro comércio que trabalhe com delivery.",
+  "pedidos10Range": "Janeiro 2021 - Atualmente",
+  "pedidos10Attr1": "Tomada de decisões arquiteturais e estruturais no desenvolvimento do zero do novo ponto de venda (PDV).",
+  "pedidos10Attr2": "Desenvolvimento de uma API RESTful utilizando Typescript, Node.js (Express), DDD, seguindo uma forte filosofia de testes, incluindo testes unitários e de integração (E2E).",
+  "pedidos10Attr3": "Desenvolvimento de um painel administrativo utilizando React, Typescript e GraphQL com o intuito de gerenciar os dados fornecidos ao PDV.",
+  "pedidos10Attr4": "Desenvolvimento do PDV como um aplicativo desktop utilizando Electron, React, Typescript e GraphQL.",
+
+  "sclDesc": "SCL é uma empresa de tecnologia focada em empresas locais do ramo de calçados. A minha experiência teve seu maior foco em ferramentas para representantes, ferramentas essas que os auxiliavam no aumento de suas vendas e na organização de seus clientes e operação geral.",
+  "sclRange": "Maio 2019 - Janeiro 2021",
+  "sclAttr1": "Manutenção de uma aplicação mobile legado que utiliza vanilla JS.",
+  "sclAttr2": "Desenvolvimento de uma plataforma B2B utilizando vanilla JS.",
+  "sclAttr3": "Desenvolvimento de API's RESTful utilizando Node.js (Loopback 3) e RethinkDB.",
+  "sclAttr4": "Desenvolvimento de uma plataforma utilizada para feiras de calçado utilizando Typescript e React, incluindo uma integração com a plataforma B2B.",
+  "sclAttr5": "Manutenção de um aplicativo React Native majoritariamente utilizado pelos representantes da Maroma Sorvetes para efetuarem vendas em negócios locais.",
+
+  "copiedToClipboard": "Copiado para a área de transferência"
+}

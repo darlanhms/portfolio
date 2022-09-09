@@ -1,0 +1,25 @@
+{
+  "greetingsName": "Hi, I'm Darlan Hermes",
+  "greetingsDesc": "A self-taught full stack software developer that focuses on web-related technologies like Typescript, Javascript, Node and React",
+  "professionalExperience": "Professional experience",
+  "technologies": "Technologies",
+  "contact": "Contact",
+  "mainAssignments": "Main assignments",
+
+  "pedidos10Desc": "Pedidos10 is a technology company that focuses on deliveries of all kinds. It stands out in the market since it offers top-notch solutions for any need that a restaurant, bar, supermarket, or other type of delivery business has.",
+  "pedidos10Range": "Jan 2021 - Present",
+  "pedidos10Attr1": "Made architectural and structural decisions to develop a product from scratch (Point of Sale - POS).",
+  "pedidos10Attr2": "Developed a RESTful API using Typescript, Node.js (Express), DDD, with a substantial test coverage, including unit tests and E2E.",
+  "pedidos10Attr3": "Developed a control panel using React, Typescript and GraphQL to manage POS key information.",
+  "pedidos10Attr4": "Developed the POS platform using Electron, React, Typescript, GraphQL.",
+
+  "sclDesc": "SCL is a technology company that focuses on local shoe companies providing tools for their operational needs. My experience mostly involved agents tools, including those that helped them to increase sales and organize their customers and overall operation.",
+  "sclRange": "May 2019 - Jan 2021",
+  "sclAttr1": "Maintained a legacy vanilla JS mobile app.",
+  "sclAttr2": "Developed a B2B platform with vanilla JS.",
+  "sclAttr3": "Developed RESTful API's using Node.js (Loopback 3) and RethinkDB.",
+  "sclAttr4": "Developed a shoe trade show platform using Typescript and React, including an integration with the B2B platform.",
+  "sclAttr5": "Maintained a React Native app which is used by Maroma Sorvetes' agents to make sales to local stores.",
+
+  "copiedToClipboard": "Copied to clipboard"
+}

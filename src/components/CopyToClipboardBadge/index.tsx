@@ -1,4 +1,5 @@
 import { Box, Tooltip, useBoolean } from '@chakra-ui/react';
+import { useTranslation } from 'next-i18next';
 import SocialBadge, { SocialBadgeProps } from '../SocialBadge';
 
 interface CopyToClipboardBadgeProps extends SocialBadgeProps {
@@ -7,6 +8,7 @@ interface CopyToClipboardBadgeProps extends SocialBadgeProps {
 
 const CopyToClipboardBadge: React.FC<CopyToClipboardBadgeProps> = ({ text, ...rest }) => {
   const [open, setOpen] = useBoolean(false);
+  const { t } = useTranslation();
 
   const handleCopy = () => {
     setOpen.on();
@@ -15,7 +17,7 @@ const CopyToClipboardBadge: React.FC<CopyToClipboardBadgeProps> = ({ text, ...re
   };
 
   return (
-    <Tooltip isOpen={open} label="Copiado para a área de transferência!">
+    <Tooltip isOpen={open} label={`${t('copiedToClipboard')}!`}>
       <Box cursor="pointer" onClick={handleCopy}>
         <SocialBadge {...rest} />
       </Box>

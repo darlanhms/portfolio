@@ -1,8 +1,9 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import AnimatedSections from '@/components/AminatedSection';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import AnimatedSections from '@/components/AnimatedSection';
 import PresentationSection from '@/components/Home/Presentation';
-import TechnologiesSection from '@/components/Home/Tecnologies';
+import TechnologiesSection from '@/components/Home/Technologies';
 import ProfessionalExperienceSection from '@/components/Home/ProfessionalExperience';
 import ContactSection from '@/components/Home/Contact';
 
@@ -20,6 +21,20 @@ const Home: NextPage = () => {
       </AnimatedSections.Container>
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  if (!locale) {
+    return {
+      props: {},
+    };
+  }
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
+  };
 };
 
 export default Home;

@@ -1,4 +1,4 @@
-import AnimatedSections from '@/components/AminatedSection';
+import AnimatedSections from '@/components/AnimatedSection';
 import {
   Center,
   CircularProgress,
@@ -11,6 +11,7 @@ import {
 import { FaReact, FaDocker, FaAws, FaNodeJs } from 'react-icons/fa';
 import { SiJavascript, SiTypescript, SiKubernetes, SiFlutter } from 'react-icons/si';
 import { IconType } from 'react-icons';
+import { useTranslation } from 'next-i18next';
 
 interface IndividualTechnologyProps {
   name: string;
@@ -38,13 +39,15 @@ const IndividualTechnology: React.FC<React.PropsWithChildren<IndividualTechnolog
 };
 
 const TechnologiesSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <AnimatedSections.Section bgColor="gray.100">
       <Container h="100%" maxW={{ base: 'container.xl', md: 'container.lg' }}>
         <Center h="100%">
           <VStack spacing="50px">
             <Text fontSize="2xl" fontWeight="bold">
-              Technologies
+              {t('technologies')}
             </Text>
             <Grid w="100%" templateColumns="repeat(3, 1fr)" gap={{ base: '30px', md: '50px' }}>
               <IndividualTechnology progress={100} name="Typescript" Icon={SiTypescript} />

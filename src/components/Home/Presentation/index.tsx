@@ -1,11 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
-import AnimatedSections from '@/components/AminatedSection';
+import AnimatedSections from '@/components/AnimatedSection';
 import { Center, Container, Flex, Grid, GridItem, Text, VStack, HStack } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import profilePic from '@/assets/images/profile.jpg';
 import UrlSocialBadge from '@/components/UrlSocialBadge';
+import { useTranslation } from 'next-i18next';
 
 const PresentationSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <AnimatedSections.Section bgColor="gray.700">
       <Container h="100%" maxW={{ base: 'container.xl', md: 'container.lg' }}>
@@ -20,13 +23,10 @@ const PresentationSection: React.FC = () => {
               <GridItem gridArea="description">
                 <Flex alignItems="center" h="100%" color="white" textAlign="start">
                   <VStack align="flex-start" spacing="7">
-                    <Text fontSize={{ base: 'xl', md: '2xl' }} fontWeight="bold">
-                      Hi, I'm Darlan Hermes 👋
+                    <Text fontSize="larger" fontWeight="bold">
+                      {t('greetingsName')} 👋
                     </Text>
-                    <Text>
-                      A self-taught full stack software developer that focuses on web-related technologies like
-                      Typescript, Javascript, Node and React
-                    </Text>
+                    <Text>{t('greetingsDesc')}</Text>
                   </VStack>
                 </Flex>
               </GridItem>

@@ -1,18 +1,21 @@
-import AnimatedSections from '@/components/AminatedSection';
+import AnimatedSections from '@/components/AnimatedSection';
 import CopyToClipboardBadge from '@/components/CopyToClipboardBadge';
 import UrlSocialBadge from '@/components/UrlSocialBadge';
 import { Center, Container, Flex, Text, VStack } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { AiOutlineMail } from 'react-icons/ai';
+import { useTranslation } from 'next-i18next';
 
 const ContactSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <AnimatedSections.Section bgColor="gray.100">
       <Container h="100%" maxW={{ base: 'container.xl', md: 'container.lg' }}>
         <Center h="100%">
           <VStack spacing="50px" width="100%">
             <Text fontSize="2xl" fontWeight="bold">
-              Contact
+              {t('contact')}
             </Text>
             <Flex
               gap="20px"
