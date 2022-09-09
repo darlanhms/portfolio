@@ -75,8 +75,8 @@ const ProfessionalExperienceSection: React.FC = () => {
                         Sale - POS)
                       </ListItem>
                       <ListItem>
-                        Developed an API using Typescript, Node.js (Express), DDD, with a substantial test
-                        coverage, including unit tests and E2E
+                        Developed a RESTful API using Typescript, Node.js (Express), DDD, with a substantial
+                        test coverage, including unit tests and E2E
                       </ListItem>
                       <ListItem>
                         Developed a control panel using React, Typescript and GraphQL to manage POS key
