@@ -3,7 +3,7 @@ import AnimatedSections from '@/components/AminatedSection';
 import { Center, Container, Flex, Grid, GridItem, Text, VStack, HStack } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import profilePic from '@/assets/images/profile.jpg';
-import SocialBadge from '@/components/SocialBadge';
+import UrlSocialBadge from '@/components/UrlSocialBadge';
 
 const PresentationSection: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const PresentationSection: React.FC = () => {
                       Hi, I'm Darlan Hermes 👋
                     </Text>
                     <Text>
-                      A self-taught full stack software developer that focus on web-related technologies like
+                      A self-taught full stack software developer that focuses on web-related technologies like
                       Typescript, Javascript, Node and React
                     </Text>
                   </VStack>
@@ -46,8 +46,18 @@ const PresentationSection: React.FC = () => {
               </GridItem>
             </Grid>
             <HStack spacing={5}>
-              <SocialBadge Icon={FaLinkedin} url="https://www.linkedin.com/in/darlanhms/" label="LinkedIn" />
-              <SocialBadge Icon={FaGithub} url="https://github.com/darlanhms" label="GitHub" />
+              <UrlSocialBadge
+                Icon={FaLinkedin}
+                url="https://www.linkedin.com/in/darlanhms/"
+                label="LinkedIn"
+                variant="dark"
+              />
+              <UrlSocialBadge
+                Icon={FaGithub}
+                url="https://github.com/darlanhms"
+                label="GitHub"
+                variant="dark"
+              />
             </HStack>
           </VStack>
         </Center>

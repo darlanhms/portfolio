@@ -1,40 +1,33 @@
-import { Center, Link, Text } from '@chakra-ui/react';
+import { Center, Text } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
 
-interface SocialBadgeProps {
+export interface SocialBadgeProps {
   Icon: IconType;
-  url: string;
   label: string;
+  variant?: 'dark' | 'light';
 }
 
-const SocialBadge: React.FC<SocialBadgeProps> = ({ Icon, url, label }) => {
+const SocialBadge: React.FC<SocialBadgeProps> = ({ Icon, label, variant = 'dark' }) => {
   return (
-    <Link
-      href={url}
+    <Center
+      flexDirection="row"
+      gap={3}
+      px={5}
+      py={3}
+      borderRadius={5}
+      borderColor={variant === 'dark' ? 'white' : 'gray.700'}
+      borderWidth={1}
+      cursor="pointer"
+      color={variant === 'dark' ? 'white' : 'gray.700'}
       _hover={{
-        textDecoration: 'none',
+        color: variant === 'dark' ? 'gray.300' : 'gray.500',
+        transition: '0.2s',
+        borderColor: variant === 'dark' ? 'gray.300' : 'gray.500',
       }}
-      isExternal
     >
-      <Center
-        flexDirection="row"
-        gap={3}
-        px={5}
-        py={3}
-        borderRadius={5}
-        borderColor="white"
-        borderWidth={1}
-        color="white"
-        _hover={{
-          color: 'gray.300',
-          transition: '0.2s',
-          borderColor: 'gray.300',
-        }}
-      >
-        <Icon size={22} />
-        <Text>{label}</Text>
-      </Center>
-    </Link>
+      <Icon size={22} />
+      <Text>{label}</Text>
+    </Center>
   );
 };
 
