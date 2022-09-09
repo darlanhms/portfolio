@@ -69,7 +69,7 @@ const ProfessionalExperienceSection: React.FC = () => {
                       supermarket, or other type of delivery business has.
                     </Text>
                     <Text>Main assignments:</Text>
-                    <UnorderedList fontSize="sm">
+                    <UnorderedList spacing={1} fontSize="sm">
                       <ListItem>
                         Made architectural and structural decisions to develop a product from scratch (Point of
                         Sale - POS).
@@ -101,7 +101,7 @@ const ProfessionalExperienceSection: React.FC = () => {
                       them to increase sales and organize their customers and overall operation.
                     </Text>
                     <Text>Main assignments:</Text>
-                    <UnorderedList fontSize="sm">
+                    <UnorderedList spacing={1} fontSize="sm">
                       <ListItem>Maintained a legacy vanilla JS mobile app.</ListItem>
                       <ListItem>Developed a B2B platform with vanilla JS.</ListItem>
                       <ListItem>Developed RESTful API's using Node.js (Loopback 3) and RethinkDB.</ListItem>
