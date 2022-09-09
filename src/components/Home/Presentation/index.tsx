@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import profilePic from '@/assets/images/profile.jpg';
 import UrlSocialBadge from '@/components/UrlSocialBadge';
 import { useTranslation } from 'next-i18next';
+import I18nSelector from '@/components/I18nSelector';
 
 const PresentationSection: React.FC = () => {
   const { t } = useTranslation();
@@ -12,6 +13,7 @@ const PresentationSection: React.FC = () => {
   return (
     <AnimatedSections.Section bgColor="gray.700">
       <Container h="100%" maxW={{ base: 'container.xl', md: 'container.lg' }}>
+        <I18nSelector />
         <Center h="100%">
           <VStack spacing="100px">
             <Grid
